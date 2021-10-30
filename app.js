@@ -1,4 +1,17 @@
-
+Vue.createApp({
+    data() {
+        return {
+            goals: [],
+            enteredValue: ''
+        };
+    },
+    methods: {
+        addGoal() {
+            this.goals.push(this.enteredValue);
+            this.enteredValue = '';
+        }
+    }
+}).mount('#app');
 
 // Using Regular JavaScript describing every single step that should be executed by the browser.
 // const buttonEl = document.querySelector('button');
